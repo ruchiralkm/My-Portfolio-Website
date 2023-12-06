@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!-- Coding By Ruchira Kaluarachchi -->
+<head>
+   <meta charset="utf-8">
+   <title>About</title>
+   <link rel="stylesheet" href="abcss.css">
+   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+   <script src="https://kit.fontawesome.com/f2942c71c5.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" href="code.png" type="image/x-icon">
+</head>
+<body>
+
+   <nav><div class="navi">
+      <ul>
+         <li class="logo"><a href="index.html">Ruchira<span style="color: #FF5733;">LK</span></a></li>
+         <li class="items"><a href="index.html">Home</a></li>
+         <li class="items"><a href="service.html">Services</a></li>
+         <li class="items"><a href="ab.html">About</a></li>
+         <li class="items"><a href="conts.html">Contact</a></li>
+         <!--<li class="items"><a href="#">Blogs</a></li>
+         <li class="items"><a href="#">Feedback</a></li>-->
+         <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
+      </ul>
+    </div>
+   </nav>
+   <script>
+      $(document).ready(function(){
+        $('.btn').click(function(){
+          $('.items').toggleClass("show");
+          $('ul li').toggleClass("hide");
+        });
+      });
+   </script>
+
+   
+   <div class="wrapper">
+      <div class="texts">
+         <h2 style="color: #FF5733;">About Me</h2><br>
+      </div>
+   </div>
+
+
+<!-----------------------Middle------------------------>
+
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="q2.jpg" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1>My Job Role</h1>
+                <p style="font-size: 20px;">Software engineering is a dynamic and evolving field that encompasses the design, development, and maintenance of software applications and systems. Software engineers analyze user requirements, create technical specifications and write code in various programming languages. They collaborate with cross-functional teams, ensure software quality through testing and debugging and continuously update and optimize existing solutions. With an increasing demand for technological solutions across industries, software engineers provide an important role in determining the digital landscape and utilizing innovation.
+                </p><br>
+                
+                <div class="tab-titles">
+                    <p class = "tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class = "tab-links"  onclick="opentab('achievements')">Achievements</p>
+                </div>
+
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span><b>Computer Programming</b></span><br>I have solid skills in computer programming, with a focus on languages such as Python, Java, C#, MsSQL, PHP, HTML & CSS. My ability to write clean, efficient code contributes to to develop and maintain reliable software solutions.</li><br>
+                        <li><span><b>Graphic Designing</b></span><br>I bring a creative reach to software development through my expertise in graphic designing. This skill enhances my ability to create visually attractive and user-friendly interfaces, ensuring a positive user experience.</li><br>
+                        <li><span><b>Problem-solving</b></span><br>I perform well when faced with complex issues, using analytical thinking and a systematic approach to find effective solutions. This skill is crucial in identifying and resolving challenges throughout the software development lifecycle.</li><br>
+                        <li><span><b>Effective Communication</b></span><br>In collaborative software development environments, communication is important. I am particularly skilled at communicating technical concepts to both technical and non-technical stakeholders, improving clear understanding and facilitating smooth project communication.</li><br>
+                        <li><span><b>Team Collaboration</b></span><br>Recognizing the importance of collaboration, I contribute actively to a collaborative and dynamic development environment. My ability to collaborate effectively within a team, share insights, and assist teammates improves overall project efficiency and success.</li><br>
+                    </ul>
+                </div>
+
+
+                <div class="tab-contents" id="achievements">
+                    <ul>
+                        <li><span><b>Introduction to Cybersecurity - Cisco</b></span><br>Learned Cybersecurity basics to protect personal digital life and gain
+                            insights into the biggest security challenges companies, governments,
+                            and educational institutions face today.<a style="color: #FF5733;" href="https://www.credly.com/badges/84cb2a16-3d96-40f7-934d-5da3cd446eb9/print"> Read more</a>
+                            </li><br>
+                        <li><span><b>Computer Hardware Basics - Cisco</b></span><br>Having a basic understanding for devices and how they work is critical
+                            for success in today's digital world.<a style="color: #FF5733;" href="https://www.credly.com/badges/d2822ff5-945c-4e0a-9bd1-158fc03d40f6/print"> Read more</a>
+                            </li><br>
+                        <li><span><b>Web Design and Development - University of Moratuwa</b></span><br>Skills and knowledge in developing fully-functional, usable web
+                            applications.<a style="color: #FF5733;" href="https://open.uom.lk/lms/mod/customcert/verify_certificate.php?contextid=5101&code=QYdQbzI4AV&qrcode=1"> Read more</a>
+                            </li><br>
+                        <li><span><b>Programming in Python - University of Moratuwa</b></span><br> Provide exposure to core programming concepts in Python language.
+                            <a style="color: #FF5733;" href="https://open.uom.lk/lms/mod/customcert/verify_certificate.php?contextid=4776&code=1piewmlcjD&qrcode=1"> Read more</a>
+                            </li><br>
+                        <li><span><b>Digital Skills in Artificial Intelligence</b></span><br> Enhanced understanding of AI with interesting facts, trends, and insights,
+                            and helped to explore the working relationship between humans and AI.
+                            <a style="color: #FF5733;" href="https://www.futurelearn.com/certificates/mbkhybe"> Read more</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+                
+
+            
+            </div>
+        </div>
+    </div>        
+</div>
+
+ <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+ </script>
+ 
+ 
+     <!------------------------------------------------scocial media----------------------------->
+
+     <section class="footer">
+      <div class="social">
+            <h2>Follow On</h2><br>
+            <a href="https://www.facebook.com/ruchira.kaluarachchi.7/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com/ruchira_kaluarachchi_?igshid=OGQ5ZDc2ODk2ZA=="><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/ruchiralkm"><i class="fab fa-github"></i></a>
+        </div>
+      <p class="copyright">
+            ©2023 Designed by Ruchira Kaluarachchi | All Rights Reserved.
+      </p>
+      </section>
+
+
+
+   <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          var disclaimer = document.querySelector("img[alt='www.000webhost.com']");
+          if(disclaimer) {
+              disclaimer.remove();
+          }
+      });
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!-- Coding By Ruchira Kaluarachchi -->
+<head>
+   <meta charset="utf-8">
+   <title>Services</title>
+   <link rel="stylesheet" href="servicecs.css">
+   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+   <script src="https://kit.fontawesome.com/f2942c71c5.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" href="code.png" type="image/x-icon">
+</head>
+<body>
+   <nav><div class="navi">
+      <ul>
+         <li class="logo"><a href="index.html">Ruchira<span style="color: #FF5733;">LK</span></a></li>
+         <li class="items"><a href="index.html">Home</a></li>
+         <li class="items"><a href="service.html">Services</a></li>
+         <li class="items"><a href="ab.html">About</a></li>
+         <li class="items"><a href="conts.html">Contact</a></li>
+         <!--<li class="items"><a href="#">Blogs</a></li>
+         <li class="items"><a href="#">Feedback</a></li>-->
+         <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
+      </ul>
+   </div>
+   </nav>
+   <script>
+      $(document).ready(function(){
+        $('.btn').click(function(){
+          $('.items').toggleClass("show");
+          $('ul li').toggleClass("hide");
+        });
+      });
+   </script>
+
+   
+   <div class="wrapper">
+      <div class="texts">
+         <h2 style="color: #FF5733;">Services</h2><br>
+      </div>
+   </div>
+
+
+<!-- Boxes -->		
+
+<div class="card-con">
+
+        <div class="card">
+           <img src="sgameimg/boys.png" alt=""> 
+           <div class="content">
+                <h3>Sample of Desktop and Mobile Game</h3>
+				<p>Free</p>
+                <a href="sgame.html" class="btn"><b>Download</b></a>
+           </div>
+        </div>
+
+        <div class="card">
+         <img src="mplayerimg/image0.png" alt=""> 
+         <div class="content">
+              <h3>User-Friendly Desktop Music Player</h3>
+          <p>LKR 300</p>
+              <a href="mplayer.html" class="btn"><b>Download</b></a>
+         </div>
+        </div>
+
+        <div class="card">
+         <img src="pgen/image0.png" alt=""> 
+         <div class="content">
+              <h3>Simple Desktop Password Generator</h3>
+          <p>LKR 300</p>
+              <a href="pgen.html" class="btn"><b>Download</b></a>
+         </div>
+        </div>
+
+
+</div>
+
+
+
+     <!------------------------------------------------scocial media----------------------------->
+
+     <section class="footer">
+      <div class="social">
+            <h2>Follow On</h2><br>
+            <a href="https://www.facebook.com/ruchira.kaluarachchi.7/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com/ruchira_kaluarachchi_?igshid=OGQ5ZDc2ODk2ZA=="><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/ruchiralkm"><i class="fab fa-github"></i></a>
+      <p class="copyright">
+            ©2023 Designed by Ruchira Kaluarachchi | All Rights Reserved.
+      </p>
+      </section>
+
+
+
+   <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          var disclaimer = document.querySelector("img[alt='www.000webhost.com']");
+          if(disclaimer) {
+              disclaimer.remove();
+          }
+      });
+  </script>
+
+<script>
+   const scriptURL = 'https://script.google.com/macros/s/AKfycbw8wNF6rKI30_k93r_ul_ckX1N93Ln8b3NBBtcvG42Q_Iol2xldBbqTCaR9akYv7kJl_A/exec'
+   const form = document.forms['submit-to-google-sheet']
+ 
+   form.addEventListener('submit', e => {
+     e.preventDefault()
+     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+       .then(response => console.log('Success!', response))
+       .catch(error => console.error('Error!', error.message))
+   })
+ </script>
+  
+</body>
+</html>

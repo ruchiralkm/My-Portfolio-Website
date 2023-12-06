@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!-- Coding By Ruchira Kaluarachchi -->
+<head>
+   <meta charset="utf-8">
+   <title>Buy</title>
+   <link rel="stylesheet" href="buymplayer.css">
+   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+   <script src="https://kit.fontawesome.com/f2942c71c5.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" href="code.png" type="image/x-icon">
+</head>
+<body>
+
+
+
+   <nav>
+      <div class="navi">
+      <ul>
+         <li class="logo"><a href="index.html">Ruchira<span style="color: #FF5733;">LK</span></a></li>
+         <li class="items"><a href="index.html">Home</a></li>
+         <li class="items"><a href="service.html">Services</a></li>
+         <li class="items"><a href="ab.html">About</a></li>
+         <li class="items"><a href="conts.html">Contact</a></li>
+         <!--<li class="items"><a href="#">Feedback</a></li>-->
+         <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
+      
+      </ul>
+   </div>
+   </nav>
+   <script>
+      $(document).ready(function(){
+        $('.btn').click(function(){
+          $('.items').toggleClass("show");
+          $('ul li').toggleClass("hide");
+        });
+      });
+   </script>
+
+   
+   <div class="wrapper">
+      <div class="texts">
+         <h2 style="color: #FF5733;">Buy source files</h2><br>
+      </div>
+   </div>
+
+
+
+
+
+      <!------------------------------------------------Form----------------------------->  
+
+      <section class="contact">
+         <div class="form"> 
+            <p style="color: #efebea; font-size: 20px;">If you want to source files, fill in the form below.</p><br><br>
+               <form action="" name="submit-to-google-sheet">
+                  <input type="text" name="users" placeholder="Your Name" required>
+                  <input type="text" name="Email" placeholder="Email" required>
+                  <input type="number" name="Num" placeholder="Phone Number (Whatsapp Number)" required>
+                  <!----<textarea type="text" name = "Des" class="input-field textarea-field" placeholder="Your Message" cols="30" rows="10"></textarea>-->
+               
+                 <input type="submit" name="" value="Buy Now" class="btn">
+               </form>
+               <span id = "msg" style="color: #efebea;"></span>
+         </div>
+        <!---- 
+         <div class="contact-img">
+            <img src="cn.gif"><br><br>
+            <p style="color: #efebea;"><i class="fa fa-envelope" style="color: #efebea;"></i>&emsp;ruchiralkm@gmail.com</p>
+         
+         </div>
+        -->
+         </section>
+               
+     
+
+
+     <!------------------------------------------------scocial media----------------------------->
+
+
+   <section class="footer">
+      <div class="social">
+            <h2>Follow On</h2><br>
+            <a href="https://www.facebook.com/ruchira.kaluarachchi.7/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com/ruchira_kaluarachchi_?igshid=OGQ5ZDc2ODk2ZA=="><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/ruchiralkm"><i class="fab fa-github"></i></a>
+         </div>
+      <p class="copyright">
+         ©2023 Designed by Ruchira Kaluarachchi | All Rights Reserved.
+      </p>
+      </section>
+
+
+
+
+
+
+
+
+<!------------------------------------------------hide000webhost----------------------------->
+   <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          var disclaimer = document.querySelector("img[alt='www.000webhost.com']");
+          if(disclaimer) {
+              disclaimer.remove();
+          }
+      });
+  </script>
+
+
+
+<script>
+   const scriptURL = 'https://script.google.com/macros/s/AKfycbx8TNvhC_P-SJ4Ao05QGz8_NnoKCOdlPAjjHUzyAbDEFTkda4uWFwUT5EAkVABtrX00/exec'
+   const form = document.forms['submit-to-google-sheet']
+   const msg = document.getElementById("msg")
+ 
+   form.addEventListener('submit', e => {
+     e.preventDefault()
+     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+       .then(response => {
+         msg.innerHTML = "Your information has been successfully recorded. I will contact you soon"
+         setTimeout(function(){
+            msg.innerHTML = ""
+         },40000)
+         form.reset()
+         })
+       
+       .catch(error => console.error('Error!', error.message))
+   })
+ </script>
+
+
+
+
+
+ 
+</body>
+</html>
